@@ -1,0 +1,19 @@
+<mat-toolbar color="">
+  <span>Trainingify</span>
+  <button mat-button color="accent">About us</button>
+  <button mat-button color="accent">Contact</button>
+  <span class="fill-remaining-space"></span>
+    <button mat-button [matMenuTriggerFor]="loginMenu">Log in</button>
+    <mat-menu #loginMenu="matMenu" >
+      <form class="login-form" (click)="$event.stopPropagation();">
+        <mat-form-field style="width: 90%">
+          <mat-label>Login</mat-label>
+          <input matInput placeholder="Login">
+        </mat-form-field>
+        <mat-form-field style="width: 90%">
+          <mat-label>Password</mat-label>
+          <input matInput placeholder="Password">
+        </mat-form-field>
+      </form>
+    </mat-menu>
+</mat-toolbar>
